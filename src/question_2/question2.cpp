@@ -6,15 +6,17 @@ bool test_config()
 }
 string get_factorial_sequence(int parameter)
 {
-    string factorial,temp2 = "";
+    string factorial = "";
     int temp = 1;
-    for (size_t i = 1; i < parameter; i++)
+    for (int i = 0; i < parameter; i++)
     {
-        temp *= i;
-        if(!i==parameter)
+        temp *= (i+1);
+        if(i != parameter || i !=0)
         {
-            factorial += i + "x";
+            factorial = factorial + to_string(i) + "x";
         }
     }
-    
+    factorial = factorial + to_string(parameter) + "=" + to_string(temp);
+    return factorial;
+
 }
