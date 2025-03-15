@@ -10,3 +10,10 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+TEST_CASE("test is palindrome")
+{
+	REQUIRE(is_palindrome("abcba") == true);
+	REQUIRE(is_palindrome("abc") == false);
+	REQUIRE(is_palindrome("hannah") == true);
+	REQUIRE(is_palindrome("hanna") == false);
+}
